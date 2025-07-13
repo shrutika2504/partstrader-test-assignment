@@ -1,41 +1,64 @@
-# 🎭 Playwright | AutomationTest | UI Framework
+# PartsTrader Test Assignment
 
-## Table of Contents
+## Purpose
 
-1. [Introduction](#introduction)
-2. [Tech Details](#tech-details)
-3. [Prerequisites](#prerequisites)
-4. [Setup Instructions](#setup-instructions)
-5. [Running Tests](#running-tests)
-6. [API Testing with Playwright](#api-testing-with-playwright)
+This repository contains the **PartsTrader test assignment**, designed to demonstrate proficiency in automated testing using Playwright.
 
-## Introduction
+It includes:
 
-Welcome to the **PartsTrader Test Assignment** repository! This project demonstrates a UI automation framework built using Playwright for testing the PartsTrader platform. It includes sample UI test cases and API testing utilities, making it a comprehensive solution for validating both frontend and backend functionality.
+- ✅ UI test scripts written in **TypeScript** using the **Playwright** framework.
+- 📄 Implementation of the **Page Object Model (POM)** for maintainable and scalable test architecture.
+- 📊 Integration with **HTML reporting** for clear visibility into test results.
+- 📥 Support for **external input data** to drive test scenarios dynamically.
+- 🌐 **API testing utilities** using Playwright’s `APIRequestContext`, enabling validation of backend endpoints alongside UI workflows.
 
-## Tech Details
+This document outlines how to set up the project, install dependencies, and run both UI and API tests effectively.
 
-- **Playwright**: Enables fast, reliable, and cross-browser testing for modern web apps. Supports Chromium, Firefox, and WebKit.
-- **Allure Reports**: Integrated for rich test reporting and visualization.
-- **TypeScript**: Ensures type safety and better developer experience.
-- **pnpm**: Used for efficient package management.
+---
 
-[Playwright Documentation](https://playwright.dev/)
+## Getting the Latest Code and Running the test
 
-## Prerequisites
+```bash
+# Clone the repository (only once)
+git clone https://github.com/shrutika2504/partstrader-test-assignment.git
+cd partstrader-test-assignment
+# Fetch and update to latest version (run anytime)
+git pull origin main
 
-- Node.js (>= 20.x)
-- pnpm (>= 9.x)
-- Docker (optional, for containerized execution)
+## Setting Up the Environment
 
-## Setup Instructions
+### Prerequisites
 
-1. Clone the repository:
-   git clone https://github.com/shrutika2504/partstrader-test-assignment.git
-   cd partstrader-test-assignment
+Make sure you have the following installed:
 
-2. Install dependencies:
-    npm install
+- **Node.js** v21 or higher  
+- **npm** (or **Yarn**)  
 
-3. (Optional) Install Playwright browsers:
-    npm exec playwright install
+---
+
+### Installation
+
+Install project dependencies:
+
+```bash
+npm install
+npm exec playwright install
+
+## Running the Tests
+
+---
+
+
+Use one of the following commands to execute the test suite:
+
+```bash
+# Run All API and UI Test (all  browser)
+npx playwright test 
+# Run All UI Test (Browser = All Configured)
+npx playwright test tests/ui 
+# Run All API Test
+npx playwright test tests/api --project=API
+# Run All UI Test in Dev Environment (Browser = Chromium)
+npx cross-env TEST_ENV=dev playwright test tests/ui --project=Chromium
+# Run All API Test in Dev Environment (Browser = Chromium)
+npx cross-env TEST_ENV=dev npx playwright test tests/api --project=API
