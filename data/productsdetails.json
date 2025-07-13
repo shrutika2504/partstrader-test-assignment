@@ -1,0 +1,23 @@
+{
+  "products": [
+    {
+      "productIndex": 1,
+      "productName": "Blue Top",
+      "expectedName": "Blue Top",
+      "category": "Women > Tops",
+      "expectedQuantity": 1,
+      "expectedPrice": "Rs. 500",
+      "expectedTotal": "Rs. 500"
+    },
+    {
+      "productIndex": 2,
+      "productName": "Men Tshirt",
+      "expectedName": "Men Tshirt",
+      "category": "Men > Tshirts",
+      "expectedQuantity": 1,
+      "expectedPrice": "Rs. 400",
+      "expectedTotal": "Rs. 400"
+    }
+  ],
+  "expectedTotalAmount": "Rs. 900"
+}

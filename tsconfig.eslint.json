@@ -1,0 +1,9 @@
+// tsconfig.eslint.json
+{
+  "extends": "./tsconfig.json",
+  "include": ["tests", "pages", "env", "utils", "playwright.config.ts"],
+  "exclude": ["dist", "node_modules"],
+  "compilerOptions": {
+    "noEmit": true
+  }
+}
