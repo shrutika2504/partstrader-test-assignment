@@ -6,7 +6,7 @@ This repository contains the **PartsTrader test assignment**, designed to demons
 
 ### Key Features:
 
-- ✅ UI test scripts written in **TypeScript** using the **Playwright** framework.
+- ✅ UI/ API test scripts written in **TypeScript** using the **Playwright** framework.
 - 🧱 Implementation of the **Page Object Model (POM)** for maintainable and scalable test architecture.
 - 📊 Integration with **HTML reporting** for clear visibility into test results.
 - 📥 Support for **external input data** to drive test scenarios dynamically.
@@ -38,7 +38,7 @@ git pull origin main
 Ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/) **v21 or higher**
-- `npm` or [`yarn`](https://yarnpkg.com/)
+- `npm`
 
 ---
 
