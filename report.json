@@ -62,38 +62,6 @@
         "metadata": {
           "actualWorkers": 2
         },
-        "id": "Firefox",
-        "name": "Firefox",
-        "testDir": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
-        ],
-        "timeout": 60000
-      },
-      {
-        "outputDir": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 2
-        },
-        "id": "WebKit",
-        "name": "WebKit",
-        "testDir": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
-        ],
-        "timeout": 60000
-      },
-      {
-        "outputDir": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 2
-        },
         "id": "API",
         "name": "API",
         "testDir": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/tests",
@@ -113,14 +81,14 @@
   },
   "suites": [
     {
-      "title": "ui/place-order-register-before-checkout.spec.ts",
-      "file": "ui/place-order-register-before-checkout.spec.ts",
+      "title": "api/verifyLogin.spec.ts",
+      "file": "api/verifyLogin.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Test Case 15: Place Order: Register before Checkout Flow",
-          "ok": false,
+          "title": "API 7: POST to verify login with valid details",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -133,75 +101,27 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 20330,
-                  "error": {
-                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('#cart_info_table tbody tr').filter({ hasText: 'Blue Top' })\nExpected string: \u001b[32m\"Blue Top\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cart_info_table tbody tr').filter({ hasText: 'Blue Top' })\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('#cart_info_table tbody tr').filter({ hasText: 'Blue Top' })\nExpected string: \u001b[32m\"Blue Top\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cart_info_table tbody tr').filter({ hasText: 'Blue Top' })\u001b[22m\n\n    at CartPage.verifyCartContainsText (/Users/shrutikasawant/Downloads/partstrader-test-assignment/pages/CartPage.ts:24:30)\n    at verifyCartProducts (/Users/shrutikasawant/Downloads/partstrader-test-assignment/tests/ui/place-order-register-before-checkout.spec.ts:108:22)\n    at /Users/shrutikasawant/Downloads/partstrader-test-assignment/tests/ui/place-order-register-before-checkout.spec.ts:80:9",
-                    "location": {
-                      "file": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/pages/CartPage.ts",
-                      "column": 30,
-                      "line": 24
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39m../pages/CartPage.ts:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m       hasText\u001b[33m:\u001b[39m productName\u001b[33m,\u001b[39m\n \u001b[90m 23 |\u001b[39m     })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m expect(productRow)\u001b[33m.\u001b[39mtoContainText(expectedText)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m   }\n \u001b[90m 26 |\u001b[39m\n \u001b[90m 27 |\u001b[39m   \u001b[90m/**\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/pages/CartPage.ts",
-                        "column": 30,
-                        "line": 24
-                      },
-                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('#cart_info_table tbody tr').filter({ hasText: 'Blue Top' })\nExpected string: \u001b[32m\"Blue Top\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cart_info_table tbody tr').filter({ hasText: 'Blue Top' })\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/CartPage.ts:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m       hasText\u001b[33m:\u001b[39m productName\u001b[33m,\u001b[39m\n \u001b[90m 23 |\u001b[39m     })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m expect(productRow)\u001b[33m.\u001b[39mtoContainText(expectedText)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m   }\n \u001b[90m 26 |\u001b[39m\n \u001b[90m 27 |\u001b[39m   \u001b[90m/**\u001b[39m\u001b[0m\n\u001b[2m    at CartPage.verifyCartContainsText (/Users/shrutikasawant/Downloads/partstrader-test-assignment/pages/CartPage.ts:24:30)\u001b[22m\n\u001b[2m    at verifyCartProducts (/Users/shrutikasawant/Downloads/partstrader-test-assignment/tests/ui/place-order-register-before-checkout.spec.ts:108:22)\u001b[22m\n\u001b[2m    at /Users/shrutikasawant/Downloads/partstrader-test-assignment/tests/ui/place-order-register-before-checkout.spec.ts:80:9\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 2136,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-07-13T10:41:50.673Z",
+                  "startTime": "2025-07-18T00:20:22.051Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/test-results/ui-place-order-register-be-a5142-gister-before-Checkout-Flow-Chromium/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/test-results/ui-place-order-register-be-a5142-gister-before-Checkout-Flow-Chromium/video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/test-results/ui-place-order-register-be-a5142-gister-before-Checkout-Flow-Chromium/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/pages/CartPage.ts",
-                    "column": 30,
-                    "line": 24
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "9b16a26b4eef974b165d-25ff67398a48a523837c",
-          "file": "ui/place-order-register-before-checkout.spec.ts",
-          "line": 39,
+          "id": "3d1106a70fb9c488a923-21b301c7cdbad4930e03",
+          "file": "api/verifyLogin.spec.ts",
+          "line": 29,
           "column": 5
-        }
-      ]
-    },
-    {
-      "title": "ui/place-order-register-while-checkout.spec.ts",
-      "file": "ui/place-order-register-while-checkout.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
+        },
         {
-          "title": "Test Case 14: Place Order: Register while Checkout Flow",
+          "title": "API 8: POST to verify login without email parameter",
           "ok": true,
           "tags": [],
           "tests": [
@@ -216,12 +136,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 20948,
+                  "duration": 1478,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-07-13T10:41:50.730Z",
+                  "startTime": "2025-07-18T00:20:22.089Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -229,7 +149,403 @@
               "status": "expected"
             }
           ],
+          "id": "3d1106a70fb9c488a923-dde7d4860c33db5481ad",
+          "file": "api/verifyLogin.spec.ts",
+          "line": 45,
+          "column": 5
+        },
+        {
+          "title": "API 9: DELETE to verify login (method not supported)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chromium",
+              "projectName": "Chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 913,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-18T00:20:23.590Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d1106a70fb9c488a923-f5c46230e4e26dfc3b68",
+          "file": "api/verifyLogin.spec.ts",
+          "line": 60,
+          "column": 5
+        },
+        {
+          "title": "API 10: POST to verify login with invalid details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chromium",
+              "projectName": "Chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 909,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-18T00:20:24.205Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d1106a70fb9c488a923-79a03236c6df5e619472",
+          "file": "api/verifyLogin.spec.ts",
+          "line": 71,
+          "column": 5
+        },
+        {
+          "title": "API 7: POST to verify login with valid details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "API",
+              "projectName": "API",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1501,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-18T00:20:55.921Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d1106a70fb9c488a923-5a2097fb0074fcc8266c",
+          "file": "api/verifyLogin.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "API 8: POST to verify login without email parameter",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "API",
+              "projectName": "API",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 652,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-18T00:20:57.489Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d1106a70fb9c488a923-db135d77236f391135f0",
+          "file": "api/verifyLogin.spec.ts",
+          "line": 45,
+          "column": 5
+        },
+        {
+          "title": "API 9: DELETE to verify login (method not supported)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "API",
+              "projectName": "API",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 826,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-18T00:20:58.146Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d1106a70fb9c488a923-10e2a8608e76ecfbbde3",
+          "file": "api/verifyLogin.spec.ts",
+          "line": 60,
+          "column": 5
+        },
+        {
+          "title": "API 10: POST to verify login with invalid details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "API",
+              "projectName": "API",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 825,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-18T00:20:58.980Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d1106a70fb9c488a923-5b7838972c242c7e3c56",
+          "file": "api/verifyLogin.spec.ts",
+          "line": 71,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "ui/place-order-register-before-checkout.spec.ts",
+      "file": "ui/place-order-register-before-checkout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Test Case 15: Place Order: Register before Checkout Flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chromium",
+              "projectName": "Chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 41582,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-18T00:20:24.516Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9b16a26b4eef974b165d-25ff67398a48a523837c",
+          "file": "ui/place-order-register-before-checkout.spec.ts",
+          "line": 39,
+          "column": 5
+        },
+        {
+          "title": "Test Case 15: Place Order: Register before Checkout Flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "API",
+              "projectName": "API",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17449,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-18T00:20:59.833Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9b16a26b4eef974b165d-f200fc6eacc42cb6428d",
+          "file": "ui/place-order-register-before-checkout.spec.ts",
+          "line": 39,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "ui/place-order-register-while-checkout.spec.ts",
+      "file": "ui/place-order-register-while-checkout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Test Case 14: Place Order: Register while Checkout Flow",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chromium",
+              "projectName": "Chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 26139,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('#cart_info_table tbody tr').filter({ hasText: 'Blue Top' })\nExpected string: \u001b[32m\"Blue Top\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cart_info_table tbody tr').filter({ hasText: 'Blue Top' })\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('#cart_info_table tbody tr').filter({ hasText: 'Blue Top' })\nExpected string: \u001b[32m\"Blue Top\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cart_info_table tbody tr').filter({ hasText: 'Blue Top' })\u001b[22m\n\n    at CartPage.verifyCartContainsText (/Users/shrutikasawant/Downloads/partstrader-test-assignment/pages/CartPage.ts:24:30)\n    at verifyCartProducts (/Users/shrutikasawant/Downloads/partstrader-test-assignment/tests/ui/place-order-register-while-checkout.spec.ts:115:22)\n    at /Users/shrutikasawant/Downloads/partstrader-test-assignment/tests/ui/place-order-register-while-checkout.spec.ts:71:9",
+                    "location": {
+                      "file": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/pages/CartPage.ts",
+                      "column": 30,
+                      "line": 24
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../pages/CartPage.ts:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m       hasText\u001b[33m:\u001b[39m productName\u001b[33m,\u001b[39m\n \u001b[90m 23 |\u001b[39m     })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m expect(productRow)\u001b[33m.\u001b[39mtoContainText(expectedText)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m   }\n \u001b[90m 26 |\u001b[39m\n \u001b[90m 27 |\u001b[39m   \u001b[90m/**\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/pages/CartPage.ts",
+                        "column": 30,
+                        "line": 24
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('#cart_info_table tbody tr').filter({ hasText: 'Blue Top' })\nExpected string: \u001b[32m\"Blue Top\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cart_info_table tbody tr').filter({ hasText: 'Blue Top' })\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/CartPage.ts:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m       hasText\u001b[33m:\u001b[39m productName\u001b[33m,\u001b[39m\n \u001b[90m 23 |\u001b[39m     })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m expect(productRow)\u001b[33m.\u001b[39mtoContainText(expectedText)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m   }\n \u001b[90m 26 |\u001b[39m\n \u001b[90m 27 |\u001b[39m   \u001b[90m/**\u001b[39m\u001b[0m\n\u001b[2m    at CartPage.verifyCartContainsText (/Users/shrutikasawant/Downloads/partstrader-test-assignment/pages/CartPage.ts:24:30)\u001b[22m\n\u001b[2m    at verifyCartProducts (/Users/shrutikasawant/Downloads/partstrader-test-assignment/tests/ui/place-order-register-while-checkout.spec.ts:115:22)\u001b[22m\n\u001b[2m    at /Users/shrutikasawant/Downloads/partstrader-test-assignment/tests/ui/place-order-register-while-checkout.spec.ts:71:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-18T00:20:25.132Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/test-results/ui-place-order-register-wh-d42fa-egister-while-Checkout-Flow-Chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/test-results/ui-place-order-register-wh-d42fa-egister-while-Checkout-Flow-Chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/test-results/ui-place-order-register-wh-d42fa-egister-while-Checkout-Flow-Chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/shrutikasawant/Downloads/partstrader-test-assignment/pages/CartPage.ts",
+                    "column": 30,
+                    "line": 24
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
           "id": "f9db947fa50097113568-cad6ec53149e64256d9c",
+          "file": "ui/place-order-register-while-checkout.spec.ts",
+          "line": 41,
+          "column": 5
+        },
+        {
+          "title": "Test Case 14: Place Order: Register while Checkout Flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "API",
+              "projectName": "API",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 14466,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-18T00:21:10.734Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f9db947fa50097113568-41dcc5d68eb138538857",
           "file": "ui/place-order-register-while-checkout.spec.ts",
           "line": 41,
           "column": 5
@@ -239,9 +555,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-07-13T10:41:49.120Z",
-    "duration": 23411.607,
-    "expected": 1,
+    "startTime": "2025-07-18T00:20:20.488Z",
+    "duration": 65200.213,
+    "expected": 11,
     "skipped": 0,
     "unexpected": 1,
     "flaky": 0
